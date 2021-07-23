@@ -8,13 +8,12 @@ import { IconProps } from "./types/interfaces";
  */
 const Icon: React.FC<IconProps> = ({
     name,
-    height,
-    width,
+    size,
     onCompleted,
     onError,
     ...rest
 }): React.ReactElement | null => {
-    const { exists, error, loading, SvgIcon } = useDynamicSVGImport(name, {
+    const { error, loading, SvgIcon } = useDynamicSVGImport(name, {
         onCompleted,
         onError,
     });
@@ -25,12 +24,7 @@ const Icon: React.FC<IconProps> = ({
         return <p>Loading...</p>;
     }
     if (SvgIcon) {
-        console.log(exists);
-        if (!exists) {
-            height *= 15.1;
-            width *= 15.1;
-        }
-        return <SvgIcon {...rest} style={{ height, width }} />;
+        return <SvgIcon {...rest} style={{ height: size, width: size }} />;
     }
     return null;
 };

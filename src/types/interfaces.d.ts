@@ -8,8 +8,7 @@ export interface DynamicSVGImportOptions {
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
     name: string;
-    height: number;
-    width: number;
+    size: number;
     onCompleted?: DynamicSVGImportOptions["onCompleted"];
     onError?: DynamicSVGImportOptions["onError"];
 }

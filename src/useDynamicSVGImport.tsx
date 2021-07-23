@@ -9,7 +9,6 @@ export default function useDynamicSVGImport(
     const ImportedIconRef = useRef<React.FC<React.SVGProps<SVGSVGElement>>>();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<Error>();
-    const [exists, setExists] = useState(false);
 
     const { onCompleted, onError } = options;
 
@@ -23,7 +22,6 @@ export default function useDynamicSVGImport(
                     )
                 ).default;
                 onCompleted?.(name, ImportedIconRef.current);
-                setExists(true);
             } catch (err) {
                 console.log("ERROR", err.message);
                 if (err.message.includes("Cannot find module")) {
@@ -40,5 +38,5 @@ export default function useDynamicSVGImport(
         importIcon();
     }, [name, onCompleted, onError]);
 
-    return { exists, error, loading, SvgIcon: ImportedIconRef.current };
+    return { error, loading, SvgIcon: ImportedIconRef.current };
 }
