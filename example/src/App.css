@@ -1,0 +1,22 @@
+.App {
+    text-align: center;
+}
+
+.Input-container {
+    margin: 4rem;
+}
+
+.Icon-search-input {
+    width: 20vw;
+    height: 3.5vh;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+.footer-container {
+    margin-top: 25vh;
+}
+
+.footer-icon {
+    display: contents;
+}
