@@ -23,11 +23,11 @@ export default function useDynamicSVGImport(
                 ).default;
                 onCompleted?.(name, ImportedIconRef.current);
             } catch (err) {
-                console.log("ERROR", err.message);
                 if (err.message.includes("Cannot find module")) {
                     ImportedIconRef.current = DefaultIcon;
                     onCompleted?.(name, ImportedIconRef.current);
                 } else {
+                    console.error("IMPORT ERROR", err.message);
                     onError?.(err);
                     setError(err);
                 }
