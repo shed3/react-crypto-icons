@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { DynamicSVGImportOptions } from "./types/interfaces";
-import DefaultIcon from "!!@svgr/webpack?+svgo,+titleProp,+ref!../assets/default.svg";
+import DefaultIcon from "!!@svgr/webpack?+svgo,+titleProp,+ref!./assets/default.svg";
 
 export default function useDynamicSVGImport(
     name: string,
@@ -19,7 +19,7 @@ export default function useDynamicSVGImport(
             try {
                 ImportedIconRef.current = (
                     await import(
-                        `!!@svgr/webpack?+svgo,+titleProp,+ref!../assets/${name}.svg`
+                        `!!@svgr/webpack?+svgo,+titleProp,+ref!./assets/${name}.svg`
                     )
                 ).default;
                 onCompleted?.(name, ImportedIconRef.current);
