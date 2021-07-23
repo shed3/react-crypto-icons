@@ -4,7 +4,15 @@
   "description": "Simple component used to display 400+ cryptocurrency icons.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rileystephens28/react-crypto-icons"
+    "url": "git+https://github.com/rileystephens28/react-crypto-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rileystephens28/react-crypto-icons/issues"
+  },
+  "homepage": "https://github.com/rileystephens28/react-crypto-icons#readme",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   },
   "keywords": [
     "react",
@@ -21,6 +29,7 @@
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": ["/lib"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -r ./lib/ && npm run build:esm && npm run copy-assets",
@@ -50,7 +59,5 @@
     "react-dom": "^17.0.2",
     "typescript": "^4.3.5"
   },
-  "files": [
-    "/lib"
-  ]
+  "dependencies": {}
 }
