@@ -2,7 +2,7 @@
 
 ## _A simple React component that can display 600 crypto icons_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![npm version](https://badge.fury.io/js/react-crypto-icons.svg)](https://badge.fury.io/js/react-crypto-icons) [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) [![language](https://img.shields.io/github/languages/top/rileystephens28/react-crypto-icons)]() [![license](https://img.shields.io/github/license/rileystephens28/react-crypto-icons)]()
 
 React Crypto Icons provides a simple icon component that can display crypto logos
 
